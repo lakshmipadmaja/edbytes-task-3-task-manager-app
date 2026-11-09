@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>My Task List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="intro">
+      <p class="eyebrow">STUDENT PRACTICE PROJECT</p>
+      <h1>My task list</h1>
+      <p class="subtitle">A simple place to keep track of what needs to get done.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="add-heading">
+      <h2 id="add-heading">Add a task</h2>
+      <form id="form">
+        <label for="text">Task description</label>
+        <div class="form-row">
+          <input id="text" name="task" type="text" maxlength="200"
+                 placeholder="e.g. Review JavaScript notes" autocomplete="off">
+          <button class="add-button" type="submit">Add task</button>
+        </div>
+      </form>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="task-section" aria-labelledby="tasks-heading">
+      <div class="section-heading">
+        <h2 id="tasks-heading">Your tasks</h2>
+        <span id="task-count" class="count">0 tasks</span>
+      </div>
+      <ul id="list" class="task-list" aria-label="Task list"></ul>
+      <p id="empty-state" class="empty-state">No tasks yet. Add your first task above.</p>
+    </section>
+    <footer>Tasks are saved in this browser on this device.</footer>
+  </main>
+</body>
+</html>
